@@ -1,5 +1,8 @@
 # **eap_proxy-udmpro**
 
+## UPDATE 05.13.2020
+The eap_proxy-udmpro image will not survive restarts or updates of the UDM PRO. This script (https://gist.github.com/kphonik/1ca47a613d654cc933f508067153fe1a) when run on a schedule from another host like a NAS will check that the container is still running and if not bring it up for you on the UDM.
+
 ## UPDATE 03.07.2020
 For v1.6.3 and newer you need to run your container with podman instead which changes the command slightly.  Below is an example of how to do this.  Keep in mind that currently there is an alias for docker to point to the podman executable on the UDM Pro since it was made to be a drop in replacement for docker commands.  I would still run this with the podman executable just in case that alias goes away in the future.
 ```
